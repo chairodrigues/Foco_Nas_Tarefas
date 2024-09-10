@@ -18,7 +18,8 @@ using System.Linq;
 using Abp.Application.Services.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Abp.Linq.Extensions;
-using System;
+using System; 
+using Microsoft.EntityFrameworkCore;
 
 namespace ToDoList.Lista
 {
@@ -49,7 +50,7 @@ namespace ToDoList.Lista
             return ObjectMapper.Map<SubcategoriaDto>(subcategoria);
         }
 
-        public PagedResultDto<SubcategoriaDto> GetAll(GetAllSubcategoriasDto input)
+        public PagedResultDto<SubcategoriaDto> GetAll(GetAllSubcategoriaDto input)
         {
             var querySubcategoria = GetQuery(input);
             int totalCount = querySubcategoria.Count();
@@ -66,7 +67,7 @@ namespace ToDoList.Lista
             };
         }
 
-        private IQueryable<Subcategoria> GetQuery(GetAllSubcategoriasDto request)
+        private IQueryable<Subcategoria> GetQuery(GetAllSubcategoriaDto request)
         {
             int.TryParse(request.Search, out var idSearch);
 

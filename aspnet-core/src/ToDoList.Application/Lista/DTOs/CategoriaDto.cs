@@ -12,11 +12,13 @@ namespace ToDoList.Lista.DTOs
     public class CategoriaDto:EntityDto<long>
     {
         public string CategoriaLista { get;set;}
-       public List<SubcategoriaDto> SubcategoriaLista { get;set;}
+       public List<SubcategoriaDto> Subcategorias { get;set;}
 
         public string Descricao { get;set;}
         public string Texto { get;set;}
 
         public string Detalhamento { get;set;}
+
+        public int SubcategoriasCount { get; set; }
     }
 }

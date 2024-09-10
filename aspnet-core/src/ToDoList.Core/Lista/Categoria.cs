@@ -17,5 +17,7 @@ namespace ToDoList.Lista
         public string Texto { get; set; }
 
         public string Detalhamento { get; set; }
+
+        public int SubcategoriasCount { get; set; }
     }
 }

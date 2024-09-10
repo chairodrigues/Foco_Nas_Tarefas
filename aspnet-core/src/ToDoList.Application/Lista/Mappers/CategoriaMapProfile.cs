@@ -9,17 +9,16 @@ using System.Threading.Tasks;
 using ToDoList.Lista.DTOs;
 
 namespace ToDoList.Lista.Mappers
-{ 
+{
     public class CategoriaMapProfile : Profile
     {
         public CategoriaMapProfile()
         {
-            CreateMap<Categoria, CategoriaDto>().
-                ForMember(X => X.SubcategoriasCount, y =>
-                    y.MapFrom(x => Subcategorias != null ? x.Subcategorias.Count : 0)
-                );
-                
+            CreateMap<Categoria, CategoriaDto>()
+                .ForMember(x => x.SubcategoriasCount, y =>
+                    y.MapFrom(x => x.Subcategorias != null ? x.Subcategorias.Count : 0));
+
         }
+
     }
-    
 }

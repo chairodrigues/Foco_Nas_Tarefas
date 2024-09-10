@@ -12,7 +12,7 @@ namespace ToDoList.Lista
     public interface ISubcategoriaAppService : IApplicationService
     {
 
-        PagedResultDto<SubcategoriaDto> GetAll(GetAllSubcategoriasDto input);
+        PagedResultDto<SubcategoriaDto> GetAll(GetAllSubcategoriaDto input);
         SubcategoriaDto Create(SubcategoriaDto input);
         SubcategoriaDto Update(SubcategoriaDto input);
         void Delete(EntityDto<long> input);

@@ -10,6 +10,8 @@ using System.Linq.Dynamic.Core;
 using System.Text;
 using System.Threading.Tasks;
 using ToDoList.Lista.DTOs;
+using Microsoft.EntityFrameworkCore;
+using Abp.Linq.Extensions;
 
 namespace ToDoList.Lista
 {
