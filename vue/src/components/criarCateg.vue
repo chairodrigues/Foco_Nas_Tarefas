@@ -3,7 +3,7 @@
     <v-spacer></v-spacer>
     <Breadcrumbs />
     <v-toolbar-title class="titulo pl-0"
-      >Criar Categoria de Produto
+      >Criar Categoria 
     </v-toolbar-title>
     <v-form ref="form">
       <div box-shadow dense class="caixa mr-1">
@@ -15,14 +15,14 @@
         <div class="mr-1"></div>
         <h6 class="texto">Qual a situação do registro</h6>
 
-        <v-switch
+        <!-- <v-switch
           v-model="editedItem.ativo"
           color="#3A5383"
           inset
           class="switch"
           :label="`${editedItem.ativo ? 'Ativo' : 'Inativo'}`"
           required
-        >
+        > -->
         </v-switch>
         <v-spacer></v-spacer>
         <v-text-field
@@ -80,7 +80,7 @@ import validationRules from "@/mixins/validationRules.js";
 import { RouterLink } from "vue-router";
 import { createNamespacedHelpers } from "vuex";
 
-const moduleCadastroProduto = createNamespacedHelpers("ModuleCadastroProduto");
+const moduleCadastro = createNamespacedHelpers("ModuleCadastro");
 
 export default {
   mixins: [validationRules],
@@ -120,7 +120,7 @@ export default {
     totalItems: 0,
   }),
   methods: {
-    ...moduleCadastroProduto.mapActions({
+    ...moduleCadastro.mapActions({
       carregarCategoria: "carregarCategoria",
       criarCategoria: "criarCategoria",
     }),
@@ -128,7 +128,7 @@ export default {
       if (this.$refs.form && this.$refs.form.validate()) {
         this.isLoading = true;
         await this.createItemApi(this.editedItem);
-        this.$router.push({ path: "/categoriaProdutos" });
+        this.$router.push({ path: "/categorias" });
         this.console.log();
         this.isLoading = false;
       }

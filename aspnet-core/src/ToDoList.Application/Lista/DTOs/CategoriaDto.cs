@@ -10,15 +10,18 @@ namespace ToDoList.Lista.DTOs
 {
     [AutoMap(typeof(Categoria))]
     public class CategoriaDto:EntityDto<long>
-    {
-        public string CategoriaLista { get;set;}
+    { 
+
+        public string Nome { get; set; }
+        public bool Ativo { get; set; } 
+        public string Descricao { get; set; }
+
+        public string Texto { get; set; }
+
+        public string Detalhamento { get; set; }
        public List<SubcategoriaDto> Subcategorias { get;set;}
-
-        public string Descricao { get;set;}
-        public string Texto { get;set;}
-
-        public string Detalhamento { get;set;}
 
         public int SubcategoriasCount { get; set; }
     }
 }
+

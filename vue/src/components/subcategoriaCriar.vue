@@ -1,7 +1,7 @@
 <template>
   <div>
     <h5>
-      <v-toolbar-title class="titulo">Subcategoria do produto </v-toolbar-title>
+      <v-toolbar-title class="titulo">Subcategoria</v-toolbar-title>
     </h5>
     <v-divider></v-divider>
     <v-dialog
@@ -154,7 +154,7 @@ import { RouterLink } from "vue-router";
 import { createNamespacedHelpers } from "vuex";
 import Breadcrumbs from "@/components/breadcrumbs.vue";
 const moduleSubcategoria = createNamespacedHelpers("ModuleSubcategoria");
-const moduleCadastroProduto = createNamespacedHelpers("ModuleCadastroProduto");
+const moduleCadastro = createNamespacedHelpers("ModuleCadastro");
 
 export default {
   props: {
@@ -188,7 +188,7 @@ export default {
       nome: "",
       ativo: true,
     },
-    formTitle: "Subcategorias do produto",
+    formTitle: "Subcategorias",
     class: "formTitle",
     situacaoList: [],
     skip: 0,

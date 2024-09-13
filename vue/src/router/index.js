@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Template from "@/template/Template.vue";
 import MenuLateral from "@/components/shared/menuLateral.vue";
 import Cadastro from "@/components/cadastro.vue";
-import categoriaProdutos from "@/components/categoriaProdutos.vue";
+import categorias from "@/components/categorias.vue";
 import FormaPagamento from "@/components/formaPagamento.vue";
 import CriarCategoria from "@/components/criarCateg.vue";
 import EditarCategoria from "@/components/editarCateg.vue";
@@ -37,12 +37,12 @@ const routes = [
     },
   },
   {
-    path: "/categoriaProdutos",
-    component: categoriaProdutos,
-    name: "categoriaProdutos",
+    path: "/categorias",
+    component: categorias,
+    name: "categorias",
     meta: {
       active: true,
-      title: "Categorias de Produto",
+      title: "Categorias",
       breadcrumb: [
         {
           text: "Cadastros",
@@ -50,7 +50,7 @@ const routes = [
           href: '/'
         },
         {
-          text: "Categorias de Produto",
+          text: "Categorias",
           disabled: true,
         },
       ],
@@ -73,11 +73,11 @@ const routes = [
           disabled: false, 
         },
         {
-          text: "Categoria de Produtos",
-          href:"/categoriaProdutos",
+          text: "Categorias",
+          href:"/categorias",
           disabled: false,
           to: {
-            name: "categoriaProdutos",
+            name: "categorias",
           },
         },
         {
@@ -106,11 +106,11 @@ const routes = [
           disabled: false, 
         },
         {
-          text: "Categoria de Produtos",
-          href:"/categoriaProdutos",
+          text: "Categorias",
+          href:"/categorias",
           disabled: false,
           to: {
-            name: "categoriaProdutos",
+            name: "categorias",
           },
         },
         {

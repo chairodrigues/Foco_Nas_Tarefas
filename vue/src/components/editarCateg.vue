@@ -3,7 +3,7 @@
     <Breadcrumbs />
     <h5>
       <v-toolbar-title class="titulo pl-0"
-        >Editar Categoria de Produto
+        >Editar Categoria
       </v-toolbar-title>
     </h5>
   <v-form ref="form">
@@ -69,13 +69,13 @@
 <script>
 import Subcategoria from "@/components/subcategoriaEditar.vue";
 import Breadcrumbs from "@/components/breadcrumbs.vue";
-import Cadastro from "@/components/categoriaProdutos.vue";
+import Cadastro from "@/components/categorias.vue";
 import validationRules from "@/mixins/validationRules.js";
 import { RouterLink } from "vue-router";
 
 import { createNamespacedHelpers } from "vuex";
 
-const moduleCadastroProduto = createNamespacedHelpers("ModuleCadastroProduto");
+const moduleCadastro = createNamespacedHelpers("ModuleCadastro");
 
 export default {
   mixins: [validationRules],
@@ -103,7 +103,7 @@ export default {
       { text: "Subcategoria", value: "subcat", sortable: true },
       { text: " ", value: "actions", sortable: false, align: "right" },
     ],
-    formTitle: "Categorias de Produto",
+    formTitle: "Categorias",
     class: "formTitle",
     listCategoria: [],
     situacaoList: [],
@@ -117,7 +117,7 @@ export default {
     editedItem: {},
   }),
   methods: {
-    ...moduleCadastroProduto.mapActions({
+    ...moduleCadastro.mapActions({
       getCategoriaById: "getCategoriaById",
       carregarCategoria: "carregarCategoria",
       atualizarCategoria: "atualizarCategoria",
@@ -138,7 +138,7 @@ export default {
         } else {
           await this.createItemApi(this.editedItem);
         }
-        this.$router.push({path:"/categoriaProdutos"});
+        this.$router.push({path:"/categorias"});
         this.isLoading = false;
       }
     },

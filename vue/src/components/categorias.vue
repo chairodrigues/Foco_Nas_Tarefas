@@ -1,7 +1,7 @@
 <template>
   <div>
     <Breadcrumbs />
-    <v-toolbar-title class="titulo">Categorias de Produto </v-toolbar-title>
+    <v-toolbar-title class="titulo">Categorias</v-toolbar-title>
     <v-dialog
       v-model="dialogDelete"
       max-wFatth="100px"
@@ -146,7 +146,7 @@ import validationRules from "@/mixins/validationRules.js";
 import { RouterLink } from "vue-router";
 import { createNamespacedHelpers } from "vuex";
 import Breadcrumbs from "@/components/breadcrumbs.vue";
-const moduleCadastroProduto = createNamespacedHelpers("ModuleCadastroProduto");
+const moduleCadastro = createNamespacedHelpers("ModuleCadastro");
 import editarCategoria from "@/components/editarCateg.vue";
 
 export default {
@@ -174,7 +174,7 @@ export default {
       { text: "Subcategorias", value: "subcategoriasCount", sortable: false },
       { text: " ", value: "actions", sortable: false, align: "right" },
     ],
-    formTitle: "Categorias de Produto",
+    formTitle: "Categorias",
     class: "formTitle",
     listCategoria: [],
     situacaoList: [],
@@ -186,7 +186,7 @@ export default {
     totalItems: 0,
   }),
   methods: {
-    ...moduleCadastroProduto.mapActions({
+    ...moduleCadastro.mapActions({
       carregarCategoria: "carregarCategoria",
       deletarCategoria: "deletarCategoria",
     }),
