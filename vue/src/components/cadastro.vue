@@ -11,13 +11,7 @@
             Foco Nas Tarefas
           </v-btn>
         </router-link>
-        <v-divider></v-divider>
-      <!-- <router-link to="/formaPagamento">
-        <v-btn text color="#4D4D4D">
-          <v-icon color="#4D4D4D"> monetization_on </v-icon>
-          Forma de Pagamento
-        </v-btn> 
-      </router-link>-->
+        <v-divider></v-divider> 
         <v-divider></v-divider> 
       </v-card>
     </div>
