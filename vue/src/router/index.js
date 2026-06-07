@@ -3,7 +3,8 @@ import VueRouter from "vue-router";
 import Template from "@/template/Template.vue";
 import MenuLateral from "@/components/shared/menuLateral.vue";
 import Cadastro from "@/components/cadastro.vue";
-import categorias from "@/components/categorias.vue"; 
+import categorias from "@/components/categorias.vue";
+import FormaPagamento from "@/components/formaPagamento.vue";
 import CriarCategoria from "@/components/criarCateg.vue";
 import EditarCategoria from "@/components/editarCateg.vue";
 import Subcategoria from "@/components/subcategoriaEditar.vue";
@@ -144,7 +145,27 @@ const routes = [
     },
   },
 
- 
+
+  {
+    path: "/formaPagamento",
+    component: FormaPagamento,
+    name: "FormaPagamento",
+    meta: {
+      active: true,
+      title: "Forma de Pagamento",
+      breadcrumb: [
+        {
+          text: "Cadastros",
+          disabled: false,
+          href: '/',
+        },
+        {
+          text: "Forma de Pagamento",
+          disabled: true,
+        },
+      ],
+    },
+  },
 ];
 
 const router = new VueRouter({

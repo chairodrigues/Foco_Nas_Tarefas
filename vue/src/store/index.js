@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 import App from "@/store/app.js";
 import Session from "@/store/session.js";
-import ModuleCadastro  from "@/store/moduleCadastro.js"; 
+import ModuleCadastro  from "@/store/moduleCadastro.js";
+import ModuleFormaPagamento  from "@/store/moduleFormaPagamento.js"; 
 import ModuleSubcategoria  from "@/store/moduleSubcategoria.js";
 
 export default new Vuex.Store({
@@ -43,7 +44,8 @@ export default new Vuex.Store({
   modules: {
     App,
     Session,
-    ModuleCadastro, 
+    ModuleCadastro,
+    ModuleFormaPagamento,
     ModuleSubcategoria,
   },
 });
